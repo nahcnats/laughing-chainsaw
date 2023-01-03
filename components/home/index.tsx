@@ -1,5 +1,5 @@
 import Hero from "./Hero";
 import ProjectList from "./ProjectList";
-import Contact from "./Contact";
+import ContactForm from "../common/ContactForm";
 
-export { Hero, ProjectList, Contact };
+export { Hero, ProjectList, ContactForm };
