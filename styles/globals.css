@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    @apply bg-gray-800 text-gray-400;
+}
+
+input,
+select,
+textarea {
+    @apply rounded border p-2 outline-none ring-amber-200 focus:ring;
+}
+
+.secondary-button {
+    @apply h-8 rounded-lg bg-gray-400 text-white hover:bg-amber-500;
+}
+
+.primary-button {
+    @apply h-8 rounded-lg bg-amber-500 text-white hover:text-gray-300;
+}
+
+.card {
+    @apply rounded border border-gray-400 p-2 shadow-md shadow-gray-600;
+}
+
+.active {
+    @apply text-amber-500;
+}
