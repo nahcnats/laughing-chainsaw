@@ -1,22 +1,22 @@
 import Link from "next/link";
 
 const menu = [
-    { name: "about", url: "", contact: "" },
-    { name: "work", url: "", contact: "" },
-    { name: "contact", url: "", contact: "" },
+    { name: "about", url: "/#hero", scroll: false },
+    { name: "work", url: "/#work", scroll: false },
+    { name: "contact", url: "/#contact", scroll: false },
 ]
 
 export default function Header () {
     return (
-        <header className="flex flex-row w-full justify-between items-center py-8 px-4 mb-4">
-            <div className="font-bold text-xl tracking-[.5em]">
+        <header className="flex sticky top-0 z-10 bg-gray-800 flex-row w-full justify-between items-center py-4 px-4 mb-6">
+            <div className="font-[500] text-xl tracking-[.5em]">
                 <Link href="/">&#60;nahcnats/&#62;</Link>
                 
             </div>
             <div>
                 <ul className="flex flex-row list-none space-x-6 font-[500]">
                     {
-                        menu.map((item, idx) => <li key={idx}>{item.name.toUpperCase()}</li>)
+                        menu.map((item, idx) => <li key={idx}><a href={item.url} className="hover:text-amber-500">{item.name.toUpperCase()}</a></li>)
                     }
                 </ul>
             </div>

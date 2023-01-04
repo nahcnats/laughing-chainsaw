@@ -35,3 +35,7 @@ textarea {
 .active {
     @apply text-amber-500;
 }
+
+.item-key {
+    @apply font-[600];
+}
