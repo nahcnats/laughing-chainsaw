@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>nahcnats</title>
+      <title>{process.env.NEXT_PUBLIC_SITENAME}</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
     </>
