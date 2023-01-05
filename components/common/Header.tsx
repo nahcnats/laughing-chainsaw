@@ -1,9 +1,11 @@
+'use client';
+
 import Link from "next/link";
 
 const menu = [
-    { name: "about", url: "/#hero", scroll: false },
-    { name: "work", url: "/#work", scroll: false },
-    { name: "contact", url: "/#contact", scroll: false },
+    { name: "about", url: "/#hero" },
+    { name: "work", url: "/#work" },
+    { name: "contact", url: "/#contact" },
 ]
 
 export default function Header () {
@@ -16,7 +18,11 @@ export default function Header () {
             <div>
                 <ul className="flex flex-row list-none space-x-6 font-[500]">
                     {
-                        menu.map((item, idx) => <li key={idx}><a href={item.url} className="hover:text-amber-500">{item.name.toUpperCase()}</a></li>)
+                        menu.map((item, idx) => <li key={idx}>
+                            <a href={item.url} className={`hover:text-amber-500`}>
+                                    {item.name.toUpperCase()}
+                                </a>
+                            </li>)
                     }
                 </ul>
             </div>

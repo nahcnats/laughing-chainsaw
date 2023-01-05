@@ -64,6 +64,10 @@ export default function ContactForm() {
             router.push("/success");
         } catch (error) {
             setIsError(true);
+
+            setTimeout(() => {
+                setIsError(false);
+            }, 3000);
         }
     }
 
